@@ -22,8 +22,16 @@ app.get("/", (req, res) => {
 });
 
 app.get (BASE_API_PATH + "/contacts", (req, res) => {
-    console.log(Date() + " -- GET /contacts")
-    res.send([])
+    console.log(Date() + " -- GET /contacts");
+
+    db.find({}, (err, contacts) => {
+        if(err){
+            console.log(Date() + "--" + err);
+            res.sendStatus(500);
+        }   else{
+            res.send(contacts);
+        }
+    })
 });
 
 app.post(BASE_API_PATH + "/contacts", (req, res) => {
@@ -31,7 +39,7 @@ app.post(BASE_API_PATH + "/contacts", (req, res) => {
     var contact = req.body;
     db.insert(contact, (err) => {
         if(err){
-            console.log(Date() + " - " + err)
+            console.log(Date() + " - " + err);
             res.sendStatus(500);
         } else {
             res.sendStatus(201)}
