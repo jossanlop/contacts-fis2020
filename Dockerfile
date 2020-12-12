@@ -7,7 +7,7 @@ copy package-lock.json .
 
 RUN npm install
 
-COPY index.json .
+COPY index.js .
 
 expose 3000
 
