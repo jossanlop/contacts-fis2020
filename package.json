@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url":"https://github.com/jossanlop/contacts-fis2020.git"
+    "url": "https://github.com/jossanlop/contacts-fis2020.git"
   },
   "homepage": "https://github.com/jossanlop/contacts-fis2020.git",
   "scripts": {
@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^5.11.7",
     "nedb": "^1.8.0"
   }
 }
