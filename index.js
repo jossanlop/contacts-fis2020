@@ -2,7 +2,7 @@ var express = require('express'); //paquete express desarrollo de apps
 var bodyParser = require('body-parser');
 var DataStore = require('nedb');
 
-var port = 3000;
+var port = (process.env.PORT || 3000);
 var BASE_API_PATH = "/api/v1" //versionado de la API
 var DB_FILE_NAME = __dirname + "/contacts.json";
 
