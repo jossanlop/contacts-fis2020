@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var DataStore = require('nedb');
 
 var port = (process.env.PORT || 3000);
-var BASE_API_PATH = "/api/v1" //versionado de la API
+var BASE_API_PATH = "/api/v1"; //versionado de la API
 var DB_FILE_NAME = __dirname + "/contacts.json";
 
 console.log("Starting API server...");
